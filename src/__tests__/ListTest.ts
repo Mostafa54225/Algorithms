@@ -20,7 +20,7 @@ export function test_list(list: List<number>): void {
 
     expect(list.get(2)).toEqual(5);
     expect(list.get(0)).toEqual(9);
-    expect(list.remove(7)).toEqual(7);
+    expect(list.remove(9)).toEqual(9);
     expect(list.length).toEqual(2);
-    expect(list.get(0)).toEqual(9);
+    expect(list.get(0)).toEqual(7);
 }

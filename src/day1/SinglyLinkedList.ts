@@ -58,10 +58,21 @@ export default class SinglyLinkedList<T> {
         this.head = this.tail = node
         return
     }
+
+    removeHead(): T | undefined {
+        if(this.head) {
+            this.length--
+            const removedNode = this.head
+            this.head = this.head.next
+            return removedNode.value
+        }
+        return undefined
+    }
     remove(item: T): T | undefined {
         let currentNode = this.head
         let previousNode = undefined
-        if(currentNode && currentNode.value === item) return currentNode.value
+        if(currentNode && currentNode.value === item) return this.removeHead()
+
         while(currentNode && currentNode.value !== item) {
             previousNode = currentNode
             currentNode = currentNode.next
