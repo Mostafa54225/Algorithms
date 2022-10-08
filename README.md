@@ -26,7 +26,7 @@ yarn install
 yarn generate
 ```
 
-### How to run algorithms
+### How to run tests
 ```bash
 npx jest (name of algorithm) BinarySearch
 ```
